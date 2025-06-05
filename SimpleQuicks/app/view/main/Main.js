@@ -127,7 +127,7 @@ Ext.define('SimpleQuicks.view.main.Main', {
                             // console.log('button')
                            
                             if(pressed){
-                                let createView = Ext.create('SuperQuick.view.main.task.list', {
+                                let createView = Ext.create('SimpleQuicks.view.main.task.list', {
                                     width:500,
                                     height:500,
                                     list_urgent:[],
