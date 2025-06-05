@@ -3,10 +3,18 @@ Ext.define('SimpleQuicks.view.main.windowMessage.listMessage', {
     extend          : 'Ext.window.Window',
 
     initComponent () {
+        const style = document.createElement('style');
 
+        style.textContent=`
+          .windowUI .x-window-default {
+            border-color:#FFF!important;
+          }
+        `
+        document.head.appendChild(style);
         Ext.apply(this, {
             layout: 'fit',
             header:false,
+            cls:'windowUI',
             items: [
                 this.createList()
             ],
@@ -129,7 +137,7 @@ Ext.define('SimpleQuicks.view.main.windowMessage.listMessage', {
                         {
                             xtype:'container',
                             margin:'12 8 8 8',
-                            html: `<img class="contact" width="40" height="30"></img>`
+                            html: `<div class="contact" style="width:40px; height:30px; display:inline-block;"></div>`
                         },
                         {
                             xtype:'container',
