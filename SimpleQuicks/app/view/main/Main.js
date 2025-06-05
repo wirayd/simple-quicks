@@ -67,7 +67,7 @@ Ext.define('SimpleQuicks.view.main.Main', {
                     listeners:{
                         toggle(button,pressed,e){
                             if(pressed){
-                                let createView = Ext.create('SuperQuick.view.main.windowMessage.listMessage', {
+                                let createView = Ext.create('SimpleQuicks.view.main.windowMessage.listMessage', {
                                     width:500,
                                     height:500,
                                     buttonmain:button,
